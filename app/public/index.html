@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Nexaas | Dashboard</title>
+
+    <!-- main css -->
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav>
+        <div class="brand">
+          <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo Nexaas">
+          </div>
+        </div>
+        <ul class="menu">
+          <li class="active" onclick="renderInit()">
+            <img src="assets/img/icon1.png" alt="Ícone do Painel">
+            <span>Painel</span>
+          </li>
+          <li>
+            <img src="assets/img/icon2.png" alt="Ícone Configurações">
+            <span>Configurações</span>
+          </li>
+        </ul>
+        <ul class="support">
+          <li>
+            <img src="assets/img/icon-support.jpg" alt="Ícone Suporte">
+            <span>Suporte</span>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <div class="search">
+            <input type="text" name="search" id="search" onkeyup="searchClients()" placeholder="Busque por Clientes">
+          </div>
+          <div class="perfil">
+            <div class="notification">
+              <img src="assets/img/notification.png" alt="Notificação">
+            </div>
+            <div class="user">
+              <img src="assets/img/avatar-admin.png" alt="avatar">
+            </div>
+          </div>
+        </header>
+        <section id="listClient">
+          <div class="vision-general clearfix">
+            <h2>Visão geral</h2>
+            <div class="content-box-card clearfix">
+              <div class="card">
+                <p class="title">Total de clientes</p>
+                <p class="text" id="totalClients"></p>
+              </div>
+              <div class="card">
+                <p class="title">Clientes inadimplentes</p>
+                <p class="text" id="overdue"></p>
+              </div>
+              <div class="card">
+                <p class="title">Clientes adimplentes</p>
+                <p class="text" id="defaulter"></p>
+              </div>
+              <div class="card">
+                <p class="title">Total arrecadado</p>
+                <p class="text" id="totalCollected"></p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="registered-customers clearfix">
+            <h2>Clientes cadastrados</h2>
+            <div class="content-box-list clearfix" id="clientes"></div>
+          </div>
+        </section>
+        <section id="searchResult">
+          <div class="registered-customers clearfix">
+            <h2>Clientes cadastrados</h2>
+            <div class="content-box-list clearfix" id="clientsSearchResult"></div>
+          </div>
+        </section>
+        <section id="loading">
+          <div class="content-box-load">
+            <div class="box">
+              <div class="load">
+                <img src="assets/img/spinner.png" class="img-responsive rotateInfinite" alt="">  
+              </div>
+              <span>Buscando...</span>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/script.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+/*	animation rotate fluid	*/
+@mixin animationRotateFluid($durationAnim, $tFuncAnim, $delayAnim, $interationCountAnim) {
+	@keyframes rotate-fluid {
+	    0% { transform: rotate(-360deg); }
+	    100% { transform: rotate(0deg); }
+	}
+
+	@-moz-keyframes rotate-fluid {
+	    0% { -moz-transform: rotate(-360deg); }
+	    100% { -moz-transform: rotate(0deg); }
+	}
+
+	@-webkit-keyframes rotate-fluid {
+	    0% {-webkit-transform: rotate(-360deg); }
+	    100% { -webkit-transform: rotate(0deg); }
+	}
+
+	@-o-keyframes rotate-fluid {
+	    0% { -o-transform: rotate(-360deg); }
+	    100% { -o-transform: rotate(0deg); }
+	}
+
+	animation-name: rotate-fluid;
+	animation-duration: $durationAnim;
+	animation-timing-function: $tFuncAnim;
+	animation-delay: $delayAnim;
+	animation-iteration-count: $interationCountAnim;
+
+	-moz-animation-name: rotate-fluid;
+	-moz-animation-duration: $durationAnim;
+	-moz-animation-timing-function: $tFuncAnim;
+	-moz-animation-delay: $delayAnim;
+	-moz-animation-iteration-count: $interationCountAnim;
+
+	-o-animation-name: rotate-fluid;
+	-moz-animation-duration: $durationAnim;
+	-moz-animation-timing-function: $tFuncAnim;
+	-moz-animation-delay: $delayAnim;
+	-moz-animation-iteration-count: $interationCountAnim;
+
+	-webkit-animation-name: rotate-fluid;
+	-webkit-animation-duration: $durationAnim;
+	-webkit-animation-timing-function: $tFuncAnim;
+	-webkit-animation-delay: $delayAnim;
+	-webkit-animation-iteration-count: $interationCountAnim;
+}

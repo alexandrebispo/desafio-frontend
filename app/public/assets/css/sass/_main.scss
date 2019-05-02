@@ -1,0 +1,351 @@
+.container-fluid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    nav {
+		width: 18.64171864171864% ;/* 269 * 100 / 1443 */
+		min-height: 100vh;
+		position: relative;
+		float: left;
+	}
+
+	main {
+		width: 81.28898128898129%; /* 1173 * 100 / 1443 */
+		min-height: 100vh;
+		background-color: $bg_main;
+		border-left: 1px solid;
+		border-color: $color_div_blue;
+		float: left;
+	}
+}
+
+.brand {
+	width: 100%;
+	padding: 32px 0 34px 0;
+	border-bottom: 1px solid;
+	border-color: $color_div_blue;
+
+	.logo {
+		width: 65.05576208178439%; /* 175 * 100 / 269 */
+		margin: 0 11.52416356877323%; /* 31 * 100 / 269 */
+	}
+}
+
+ul.menu {
+	width: 100%;
+
+	li {
+		padding: 18px 0 20px 31px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 15px;
+		line-height: 19px;
+		font-weight: 700;
+		color: $color_text_menu;
+
+		img {
+			vertical-align: middle;
+		}
+
+		span {
+			vertical-align: middle;
+			margin-left: 18px;
+		}
+
+		&.active {
+			background-color: $bg_menu_active;
+			border-left: 6px solid;
+			border-color: $bg_border_menu;
+		}
+	}
+}
+
+ul.support {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	li {
+		width: 100%;
+		padding: 18px 0 18px 31px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 17px;
+		line-height: 19px;
+		font-weight: 700;
+		color: $color_text_menu;
+
+		img {
+			vertical-align: middle;
+		}
+
+		span {
+			vertical-align: middle;
+			margin-left: 18px;
+		}
+	}
+}
+
+header {
+	width: 100%;
+	background-color: $bg_menu;
+	border-bottom: 1px solid;
+	border-color: $color_div_blue;
+	overflow: hidden;
+
+	.search {
+		width: 75.7885763%; /* 889 * 100 / 1173 */
+		padding: 23px 0 26px 0;
+		float: left;
+
+		input {
+			width: 89.5388076%;/* 796 * 100 / 889 */
+			display: block;
+			margin-left: 24px; /* 24 * 100 / 889 */
+			border: 1px solid $border_input;
+		    border-radius: 23px;
+	        background-position: 34px 16px;
+			background-image:url('../img/shape.png');
+ 			background-repeat:no-repeat;
+ 			padding: 16px 79px;
+ 			@include defaultText(16px, 20px, 400, $color_text_placeholder);
+
+ 			&:focus {
+ 				outline: 0;
+ 			}
+
+ 			&:-webkit-input-placeholder {
+ 				@include defaultText(16px, 20px, 400, $color_text_placeholder);
+			}
+			 
+			&:-moz-placeholder { /* Firefox 18- */
+			   @include defaultText(16px, 20px, 400, $color_text_placeholder);
+			}
+			 
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   @include defaultText(16px, 20px, 400, $color_text_placeholder);
+			}
+			 
+			&:-ms-input-placeholder {  
+			   @include defaultText(16px, 20px, 400, $color_text_placeholder);
+			}
+		}
+	}
+
+	.perfil {
+		width: 24.2114237%; /* 284 * 100 / 1173 */
+		padding: 23px 16px 20px 0;
+		float: left;
+
+		.notification {
+			width: 54.57746478873239%; /* 155 * 100 / 284 */
+			margin-top: 10px;
+			float: left;
+
+			img {
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+		.user {
+			width: 39.7887323943662%; /* 113 * 100 / 284 */
+			float: right;
+
+			img {
+				float: right;
+			}
+
+			&:before {
+				width: 14px;
+			    height: 8px;
+			    margin-top: 23px;
+			    margin-left: 14px;
+			    float: right;
+			    content: '';
+			    background-image: url(../img/arrow.png);
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}
+
+section {
+	width: 100%;
+    height: auto;
+	background-color: $bg_main;
+	padding: 33px  16px;
+
+	&#listClient {
+		display: none;
+	}
+
+	&#loading {
+		display: table;
+		height: 88.6vh;
+	}
+
+	&#searchResult {
+		display: none;
+	}
+
+	h2 {
+		border-left: 4px solid;
+		border-color: $border_title;
+		padding: 0 0 0 12px;
+		font-family: 'Roboto', sans-serif;
+		@include defaultText(14px, 20px, 700, $title);
+	}
+
+	.vision-general {
+		width: 100%;
+
+		.content-box-card {
+			width: 100%;
+			overflow: hidden;
+
+			.card {
+				width: 23.33575666190976%; /* 260 * 100 / 1114.17 */
+				margin-top: 30px;
+				margin-left: 2.064316935476633%; /* 22 * 100 / 1114.17 */
+				margin-bottom: 48px;
+				padding: 20px;
+				background-color: $white;
+				float: left;
+				box-shadow: 0px 2px 5px $boxShadow;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				.title {
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(14px, 18px, 400, $textColor);
+				}
+
+				.text {
+					font-family: 'Roboto', sans-serif;
+					margin: 5px 0 0 0;
+					@include defaultText(17px, 21px, 700, $textSpotlight);
+				}
+			}
+		}
+	}
+
+	.registered-customers {
+
+		.content-box-list {
+			width: 100%;
+			margin-top: 33px;
+			
+			.profile {
+			    width: 99.5%;
+				margin-top: 10px;
+				padding: 20px 0;
+				background-color: $white;
+				box-shadow: 0px 2px 5px $boxShadow;
+
+				&:before {
+				  content: '';
+				  display: inline-block;
+				  height: 100%;
+				  vertical-align: middle;
+				}
+
+				.avatar {
+					width: 8.438061041292639%;/* 94 * 100 / 1114.17 */
+					float: left;
+					vertical-align: middle;
+
+					img {
+						margin: 0 auto;
+						border-radius: 100%;
+						display: block;
+					}
+				}
+
+				.name {
+					width: 16.60682226211849%;/* 185 * 100 / 1114.17 */
+					margin-top: 18px;
+					float: left;
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(17px, 21px, 400, $textColor);
+					text-align: center;
+				}
+
+				.email {
+					width: 42.01077199281867%;/* 468 * 100 / 1114.17 */
+					margin-top: 18px;
+					float: left;
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(17px, 21px, 400, $textColor);
+					text-align: center;
+				}
+
+				.phone {
+					width: 19.6588868940754%;/* 219 * 100 / 1114.17 */
+					margin-top: 18px;
+					float: left;
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(17px, 21px, 400, $textColor);
+				}
+
+				.status {
+					width: 13.28545780969479%;/* 148 * 100 / 1114.17 */
+					margin-top: 18px;
+					float: left;
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(17px, 21px, 400, $textColor);
+					text-align: center;
+				}
+
+				.status-overdue {
+					width: 13.28545780969479%;/* 148 * 100 / 1114.17 */
+					margin-top: 18px;
+					float: left;
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(17px, 21px, 400, $textStatusOverdue);
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	&#loading {
+		display: table;
+
+		.content-box-load {
+			
+			margin: 0 auto;
+			display: table-cell;
+    		vertical-align: middle;
+
+			.box {
+				width: 130px;
+				margin: 0 auto;
+				
+				.load {
+					width: 32px;
+					float: left;
+				}
+
+				span {
+				    margin: 8px 0 0 15px;
+					font-family: 'Roboto', sans-serif;
+					@include defaultText(15px, 20px, 700, $textColor);
+					float: left;
+				}
+			}
+
+		}
+
+	}
+	
+	
+}
+
+.rotateInfinite {
+	@include animationRotateFluid(1s, linear, 2s, infinite);
+  
+}
